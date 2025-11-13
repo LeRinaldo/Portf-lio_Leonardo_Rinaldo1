@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio | Leonardo Rinaldo</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #0f0f0f;
+      color: #f5f5f5;
+      font-family: 'Segoe UI', sans-serif;
+      transition: all 0.3s;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      border-bottom: 2px solid #00bcd4;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #00bcd4;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .project-card:hover {
+      transform: scale(1.03);
+      background-color: rgba(0,188,212,0.1);
+      box-shadow: 0 0 10px #00bcd4;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      border-top: 1px solid #00bcd4;
+      font-size: 0.9rem;
+    }
+
+    .contrast {
+      background-color: #ffffff !important;
+      color: #000000 !important;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Leonardo Rinaldo</h1>
+    <p>Programador | Educação | Projetos Interativos</p>
+    <nav class="nav justify-content-center">
+      <a class="nav-link text-info" href="#sobre">Sobre</a>
+      <a class="nav-link text-info" href="#projetos">Projetos</a>
+      <a class="nav-link text-info" href="#habilidades">Habilidades</a>
+      <a class="nav-link text-info" href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main class="container my-5">
+    <section id="sobre" class="mb-5">
+      <h2 class="text-info border-start border-info ps-2">Sobre Mim</h2>
+      <p>Sou programador e educador, com experiência em projetos de tecnologia e inovação. Atuo com desenvolvimento de soluções criativas em JavaScript, Python e Micro:bit, unindo lógica, arte e aprendizado.</p>
+    </section>
+
+    <section id="projetos" class="mb-5">
+      <h2 class="text-info border-start border-info ps-2">Projetos</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="card bg-dark text-light project-card h-100" data-bs-toggle="modal" data-bs-target="#modalAluramon">
+            <img src="https://placehold.co/600x300?text=Aluramon" class="card-img-top" alt="Projeto Aluramon">
+            <div class="card-body">
+              <h5 class="card-title">🎮 Aluramon</h5>
+              <p class="card-text">Fusão de personagens gerados por IA, explorando o conceito de concatenar em programação com p5.js.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card bg-dark text-light project-card h-100" data-bs-toggle="modal" data-bs-target="#modalLabirinto">
+            <img src="https://placehold.co/600x300?text=Labirinto+Microbit" class="card-img-top" alt="Labirinto com Microbit">
+            <div class="card-body">
+              <h5 class="card-title">🤖 Labirinto com Micro:bit</h5>
+              <p class="card-text">Protótipo interativo usando lógica condicional e sensores para movimentar um personagem em um labirinto.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card bg-dark text-light project-card h-100" data-bs-toggle="modal" data-bs-target="#modalRecursivos">
+            <img src="https://placehold.co/600x300?text=Desenhos+Recursivos" class="card-img-top" alt="Desenhos Recursivos">
+            <div class="card-body">
+              <h5 class="card-title">🎨 Desenhos Recursivos</h5>
+              <p class="card-text">Uso de recursividade para criar padrões geométricos e artísticos com p5.js.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="habilidades" class="mb-5">
+      <h2 class="text-info border-start border-info ps-2">Habilidades</h2>
+      <p>HTML, CSS, JavaScript, Python, Micro:bit, p5.js, GitHub, Design Responsivo, Acessibilidade.</p>
+    </section>
+
+    <section id="contato">
+      <h2 class="text-info border-start border-info ps-2">Contato</h2>
+      <p>Email: <a href="mailto:leonardo@email.com" class="text-info">leonardo@email.com</a></p>
+      <p>GitHub: <a href="https://github.com/seuusuario" target="_blank" class="text-info">github.com/seuusuario</a></p>
+    </section>
+
+    <div class="text-center mt-5">
+      <button id="contrastBtn" class="btn btn-info me-2">Alternar Contraste</button>
+      <button id="increaseFont" class="btn btn-secondary me-2">A+</button>
+      <button id="decreaseFont" class="btn btn-secondary me-2">A-</button>
+      <button id="readerBtn" class="btn btn-outline-light">Leitor de Tela</button>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Leonardo Rinaldo | Portfólio de Programação
+  </footer>
+
+  <!-- Modais Bootstrap -->
+  <div class="modal fade" id="modalAluramon" tabindex="-1" aria-labelledby="aluramonLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark text-light">
+        <div class="modal-header">
+          <h5 class="modal-title" id="aluramonLabel">🎮 Projeto Aluramon</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>O projeto Aluramon combina criatividade e lógica, permitindo aos estudantes compreender o conceito de concatenação em programação, criando personagens híbridos com IA e p5.js.</p>
+          <img src="https://placehold.co/800x400?text=Aluramon+Preview" class="img-fluid rounded" alt="Preview do projeto Aluramon">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalLabirinto" tabindex="-1" aria-labelledby="labirintoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark text-light">
+        <div class="modal-header">
+          <h5 class="modal-title" id="labirintoLabel">🤖 Labirinto com Micro:bit</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>O Labirinto com Micro:bit propõe desafios de lógica e raciocínio. Os estudantes aplicam conceitos de sensores e condicionais para criar um jogo físico e digital interativo.</p>
+          <img src="https://placehold.co/800x400?text=Labirinto+Preview" class="img-fluid rounded" alt="Preview do Labirinto">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalRecursivos" tabindex="-1" aria-labelledby="recursivosLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark text-light">
+        <div class="modal-header">
+          <h5 class="modal-title" id="recursivosLabel">🎨 Desenhos Recursivos</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Este projeto aplica o conceito de recursividade na programação criativa com p5.js, resultando em padrões geométricos e artísticos interativos.</p>
+          <img src="https://placehold.co/800x400?text=Desenhos+Recursivos+Preview" class="img-fluid rounded" alt="Preview Recursivos">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    document.getElementById("contrastBtn").addEventListener("click", () => {
+      document.body.classList.toggle("contrast");
+    });
+
+    let fontSize = 16;
+    document.getElementById("increaseFont").addEventListener("click", () => {
+      fontSize += 1;
+      document.body.style.fontSize = fontSize + "px";
+    });
+    document.getElementById("decreaseFont").addEventListener("click", () => {
+      fontSize -= 1;
+      document.body.style.fontSize = fontSize + "px";
+    });
+
+    document.getElementById("readerBtn").addEventListener("click", () => {
+      const text = document.body.innerText;
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = "pt-BR";
+      speechSynthesis.speak(utterance);
+    });
+  </script>
+</body>
+</html>
